@@ -32,12 +32,15 @@ public class CustomerController {
 	@GetMapping("/customer/{id}")
 	public Optional<Customer> findCustomerById(@PathVariable Long id) {
 		
-		return customerService.findCustomerById(id);
+		
+return customerService.findCustomerById(id);
 	}
 	@PutMapping("/customer")
 	public Customer updateCustomer(@RequestBody Customer customer , @RequestParam Long id) {
 		return customerService.updateCustomer(customer,id);
 	}
+
+
 	@DeleteMapping("/customer")
 	public  String deleteCustomerById(Long id) {
 		return customerService.deleteCustomer(id);
